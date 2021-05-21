@@ -1,0 +1,1362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradien_bg"
+    android:orientation="vertical"
+    android:padding="25dp"
+    tools:context=".ui.home.HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <LinearLayout
+            android:id="@+id/addressContainer"
+            android:layout_width="match_parent"
+            android:layout_height="141dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/addresses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:textSize="24sp">
+
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/button"
+                    android:layout_width="43dp"
+                    android:layout_height="41dp"
+                    android:background="@drawable/location" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/updated_at"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="updated_at"
+                android:textSize="14sp">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/overviewContainer"
+            android:layout_width="match_parent"
+            android:layout_height="191dp"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/statuss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Clear Sky"
+                android:textSize="18sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/temps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-thin"
+
+                android:text="24oC"
+                android:textSize="90sp">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/temp_min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Min temp">
+
+                </TextView>
+
+                <Space
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content">
+
+                </Space>
+
+                <TextView
+                    android:id="@+id/temp_max"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Max Temp"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detailsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="186dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/sunrise"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content">
+
+                    </Space>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sunrise"
+                        android:textSize="12sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/sunrises"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30am"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"></Space>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/sunset"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content">
+
+                    </Space>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sunset"
+                        android:textSize="12sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/sunsets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30am"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"></Space>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/wind"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content">
+
+                    </Space>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wind"
+                        android:textSize="12sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/winds"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30am"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"></Space>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"></Space>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/pressure"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content">
+
+                    </Space>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pressure"
+                        android:textSize="12sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/pressures"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30am"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"></Space>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/humidity"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content">
+
+                    </Space>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Độ ẩm"
+                        android:textSize="12sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/humiditys"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30am"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"></Space>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/feel_like"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content">
+
+                    </Space>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cảm giác như"
+                        android:textSize="12sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/feel_likes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NDTHANH"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"></Space>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:text="HÀNG GIỜ"
+            android:textSize="20dp">
+
+        </TextView>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="122dp">
+
+            <LinearLayout
+                android:id="@+id/hour_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="94dp"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/hour_temp1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27°"
+                        android:textSize="12sp"></TextView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <ImageView
+                        android:id="@+id/img_1"
+                        android:layout_width="27dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/sunrise"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <TextView
+                        android:id="@+id/hour1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"></Space>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="94dp"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/hour_temp2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27°"
+                        android:textSize="12sp"></TextView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/sunrise"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <TextView
+                        android:id="@+id/hour2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"></Space>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="94dp"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/hour_temp3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27°"
+                        android:textSize="12sp"></TextView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/sunrise"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <TextView
+                        android:id="@+id/hour3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"></Space>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="94dp"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/hour_temp4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27°"
+                        android:textSize="12sp"></TextView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/sunrise"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <TextView
+                        android:id="@+id/hour4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"></Space>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="94dp"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/hour_temp5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27°"
+                        android:textSize="12sp"></TextView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/sunrise"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <TextView
+                        android:id="@+id/hour5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"></Space>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="94dp"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/hour_temp6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27°"
+                        android:textSize="12sp"></TextView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/sunrise"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <TextView
+                        android:id="@+id/hour6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"></Space>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="94dp"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/hour_temp7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27°"
+                        android:textSize="12sp"></TextView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/sunrise"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <TextView
+                        android:id="@+id/hour7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"></Space>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="94dp"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/hour_temp8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27°"
+                        android:textSize="12sp"></TextView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/sunrise"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <TextView
+                        android:id="@+id/hour8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"></Space>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="94dp"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/hour_temp9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27°"
+                        android:textSize="12sp"></TextView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/sunrise"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <TextView
+                        android:id="@+id/hour9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"></Space>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="94dp"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/hour_temp10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27°"
+                        android:textSize="12sp"></TextView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/sunrise"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <TextView
+                        android:id="@+id/hour10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"></Space>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="94dp"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/hour_temp11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27°"
+                        android:textSize="12sp"></TextView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/sunrise"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <TextView
+                        android:id="@+id/hour11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"></Space>y
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="94dp"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/hour_temp12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27°"
+                        android:textSize="12sp"></TextView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/sunrise"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <TextView
+                        android:id="@+id/hour12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:text="HÀNG NGÀY"
+            android:textSize="20dp">
+
+        </TextView>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="122dp">
+
+            <LinearLayout
+                android:id="@+id/day_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="94dp"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/hour_temp1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27°"
+                        android:textSize="12sp"></TextView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <ImageView
+                        android:id="@+id/img_1"
+                        android:layout_width="27dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/sunrise"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <TextView
+                        android:id="@+id/hour1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"></Space>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="94dp"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/hour_temp2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27°"
+                        android:textSize="12sp"></TextView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/sunrise"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <TextView
+                        android:id="@+id/hour2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"></Space>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="94dp"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/hour_temp3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27°"
+                        android:textSize="12sp"></TextView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/sunrise"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <TextView
+                        android:id="@+id/hour3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"></Space>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="94dp"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/hour_temp4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27°"
+                        android:textSize="12sp"></TextView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/sunrise"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <TextView
+                        android:id="@+id/hour4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"></Space>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="94dp"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/hour_temp5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27°"
+                        android:textSize="12sp"></TextView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/sunrise"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <TextView
+                        android:id="@+id/hour5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"></Space>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="94dp"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/hour_temp6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27°"
+                        android:textSize="12sp"></TextView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/sunrise"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <TextView
+                        android:id="@+id/hour6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"></Space>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="94dp"
+                    android:layout_weight="1"
+                    android:background="#3CF1EBF1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/hour_temp7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27°"
+                        android:textSize="12sp"></TextView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <ImageView
+                        android:layout_width="27dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/sunrise"
+                        app:tint="#FFF">
+
+                    </ImageView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp">
+
+                    </Space>
+
+                    <TextView
+                        android:id="@+id/hour7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"></Space>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+        <ProgressBar
+            android:id="@+id/loader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone">
+
+        </ProgressBar>
+
+        <TextView
+            android:id="@+id/errortext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/something_went_wrong"
+            android:visibility="gone">
+
+        </TextView>
+    </LinearLayout>
+</ScrollView>
